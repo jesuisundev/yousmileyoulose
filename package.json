@@ -1,0 +1,16 @@
+{
+    "name": "yousmileyoulose",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+        "express": "~4.16.1",
+        "https": "^1.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "start-dev": "nodemon index.js"
+    }
+}

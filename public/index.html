@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQRCBJYM7Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LQRCBJYM7Y');
+    </script>
+    <meta charset="utf-8">
+    <title>You Smile You Lose</title>
+    <meta name="description" content="Open your camera, we show you funny videos. If you smile, you lose ! A wholesome challenge that will make you feel better !">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="You Smile You Lose">
+    <meta property="og:description" content="Open your camera, we show you funny videos. If you smile, you lose !">
+    <meta property="og:url" content="https://www.smile-lose.com/">
+    <meta property="og:site_name" content="You Smile You Lose">
+    <meta property="og:image" content="https://www.smile-lose.com/images/preview.JPG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="You Smile You Lose">
+    <meta name="twitter:description" content="Open your camera, we show you funny videos. If you smile, you lose !">
+    <meta name="twitter:image" content="https://www.smile-lose.com/images/preview.JPG">
+    <meta name="twitter:creator" content="@jesuisundev">
+    <meta name="author" content="Mehdi ZOGHLAMI">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="libs/face-api.min.js"></script>
+    <script type="module" src="libs/app.js"></script>
+</head>
+
+<body id="global">
+    <div id="video"></div>
+    <div id="home">
+        <div id="content">
+            <h1>
+                You Smile, You Lose
+            </h1>
+            <p class="description">
+                Open your camera, we show you funny videos. If you smile, you lose !
+            </p>
+            <a href="" id="actualshit" class="button">
+                Let's start
+            </a>
+        </div>
+    </div>
+    <div id="theater">
+        <span id="smileStatus">Getting smile status ...</span>
+        <video id="webcam" autoplay muted></video>
+        <div id="intermission">
+            <img id="loading" src="https://i.stack.imgur.com/qq8AE.gif" width="32" />
+            <div id="result">
+                <span id="resultSmileStatus" class="lose"></span>
+                <br /><br />
+                <a id="nextVideo" href="" class="button">Next video</a>
+                <br /><br />
+                <strong>
+                    Having fun ? <br />Challenge your friends not to smile
+                </strong>
+                <br /><br />
+                <ul class="bwp-single-post-share-list list-unstyled">
+                    <li>
+                        <a href="https://twitter.com/share?url=https://www.smile-lose.com/&amp;text=You Smile You Lose" rel="nofollow noopener" target="_blank" class="bwp-twitter-share" onclick="window.open('https://twitter.com/share?url=https://www.smile-lose.com/&amp;text=You Smile You Lose', 'Twitter', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer.php?u=https://www.smile-lose.com/&amp;t=You%20Smile%20You%20Lose" rel="nofollow noopener" target="_blank" class="bwp-facebook-share" onclick="window.open('https://www.facebook.com/sharer.php?u=https://www.smile-lose.com/&amp;t=You%20Smile%20You%20Lose', 'Facebook', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/dialog/send?link=https://www.smile-lose.com/&amp;app_id=844511858946898&amp;redirect_uri=https://www.smile-lose.com/" rel="nofollow noopener" target="_blank" class="bwp-messenger-share" onclick="window.open('https://www.facebook.com/dialog/send?link=https://www.smile-lose.com/&amp;app_id=844511858946898&amp;redirect_uri=https://www.smile-lose.com/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                            <i class="fab fa-facebook-messenger"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/?text=https://www.smile-lose.com/" rel="nofollow noopener" target="_blank" class="bwp-whatapp-share" onclick="window.open('https://wa.me/?text=https://www.smile-lose.com/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.smile-lose.com/" rel="nofollow noopener" target="_blank" class="bwp-linkedin-share" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://www.smile-lose.com/&amp;media=true', 'Linkedin', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.reddit.com/submit?url=https://www.smile-lose.com/&amp;title=You%20Smile%20You%20Lose" rel="nofollow noopener" target="_blank" class="bwp-reddit-share" onclick="window.open('https://www.reddit.com/submit?url=https://www.smile-lose.com/&amp;title=You%20Smile%20You%20Loose', 'Reddit', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="player"></div>
+    </div>
+    <div id="credit">
+        <div class="calltoaction">
+            <h3>No more videos</h3>
+            <p>
+                This will be frequently updated, come back for more !
+            </p>
+            <strong>
+                Had fun ? <br />Challenge your friends not to smile
+            </strong>
+            <br /><br />
+            <ul class="bwp-single-post-share-list list-unstyled">
+                <li>
+                    <a href="https://twitter.com/share?url=https://www.smile-lose.com/&amp;text=You Smile You Lose" rel="nofollow noopener" target="_blank" class="bwp-twitter-share" onclick="window.open('https://twitter.com/share?url=https://www.smile-lose.com/&amp;text=You Smile You Lose', 'Twitter', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer.php?u=https://www.smile-lose.com/&amp;t=You%20Smile%20You%20Lose" rel="nofollow noopener" target="_blank" class="bwp-facebook-share" onclick="window.open('https://www.facebook.com/sharer.php?u=https://www.smile-lose.com/&amp;t=You%20Smile%20You%20Lose', 'Facebook', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/dialog/send?link=https://www.smile-lose.com/&amp;app_id=844511858946898&amp;redirect_uri=https://www.smile-lose.com/" rel="nofollow noopener" target="_blank" class="bwp-messenger-share" onclick="window.open('https://www.facebook.com/dialog/send?link=https://www.smile-lose.com/&amp;app_id=844511858946898&amp;redirect_uri=https://www.smile-lose.com/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/?text=https://www.smile-lose.com/" rel="nofollow noopener" target="_blank" class="bwp-whatapp-share" onclick="window.open('https://wa.me/?text=https://www.smile-lose.com/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.smile-lose.com/" rel="nofollow noopener" target="_blank" class="bwp-linkedin-share" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://www.smile-lose.com/&amp;media=true', 'Linkedin', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.reddit.com/submit?url=https://www.smile-lose.com/&amp;title=You%20Smile%20You%20Lose" rel="nofollow noopener" target="_blank" class="bwp-reddit-share" onclick="window.open('https://www.reddit.com/submit?url=https://www.smile-lose.com/&amp;title=You%20Smile%20You%20Loose', 'Reddit', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+                        <i class="fab fa-reddit-alien"></i>
+                    </a>
+                </li>
+            </ul>
+            <p><a href="" class="button">Retry !</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

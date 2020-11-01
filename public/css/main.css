@@ -1,0 +1,255 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    overflow: hidden;
+}
+
+body {
+    background: white;
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 0;
+}
+
+.fadeIn {
+    opacity: 1 !important;
+}
+
+.fadeOut {
+    opacity: 0 !important;
+}
+
+#home {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/images/background.png") white;
+    background-size: cover;
+    background-position: center;
+}
+
+#theater {
+    z-index: 99;
+}
+
+#home,
+#theater {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+#home #content {
+    font-size: 16px;
+    padding: 50px;
+}
+
+.button {
+    font-size: 20px;
+    background-color: #005EF9;
+    font-family: Roboto;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+    transition: background-color 1s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: #32197A;
+}
+
+#theater #smileStatus {
+    z-index: 98;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+    display: none;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+#theater #webcam {
+    width: 25%;
+    position: absolute;
+    z-index: 97;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 15px;
+}
+
+#theater #intermission,
+#credit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(/images/background.png) white;
+    background-size: cover;
+    background-position: center;
+}
+
+#credit {
+    opacity: 0;
+    display: none;
+    text-align: center;
+    color: black;
+}
+
+#theater #intermission #resultSmileStatus {
+    color: black;
+}
+
+#theater #intermission #result {
+    display: none;
+}
+
+#theater #player {
+    z-index: 95;
+}
+
+p {
+    color: black;
+}
+
+.bwp-single-post-share {
+    border-top: 1px solid #eeefef;
+    border-top-color: #2e3034;
+    padding-top: 20px;
+    width: 100%;
+    margin: 25px 0;
+    float: left;
+    text-align: left;
+    display: inline-block;
+    min-height: 1px;
+}
+
+.bwp-single-post-share-list {
+    margin: 0;
+    display: inline-block;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.bwp-single-post-share-list li {
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.bwp-single-post-share-list .bwp-twitter-share {
+    background-color: #43b1ff;
+}
+
+.bwp-single-post-share-list .bwp-facebook-share {
+    background-color: #7b9be0;
+}
+
+.bwp-single-post-share-list .bwp-messenger-share {
+    background-color: #0e76a8;
+}
+
+.bwp-single-post-share-list .bwp-whatapp-share {
+    background-color: #44c654;
+}
+
+.bwp-single-post-share-list .bwp-linkedin-share {
+    background-color: #0e76a8;
+}
+
+.bwp-single-post-share-list .bwp-reddit-share {
+    background-color: #fe5f40;
+}
+
+.bwp-single-post-share-list li a {
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.win,
+.lose {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.win {
+    color: mediumseagreen !important;
+}
+
+.lose {
+    color: red !important;
+}
+
+@media screen and (max-device-width: 500px) {
+    h1 {
+        font-size: 10vw;
+    }
+    #theater #smileStatus {
+        font-size: 6vw;
+        left: auto;
+        right: 10px;
+    }
+    .button {
+        font-size: 6vw;
+    }
+    p.description {
+        font-size: 6vw;
+    }
+    #result {
+        padding: 20px;
+    }
+    #result strong {
+        font-size: 5vw;
+    }
+    .win,
+    .lose {
+        font-size: 8vw;
+    }
+    .calltoaction {
+        font-size: 6vw;
+        padding: 50px;
+    }
+    .bwp-single-post-share-list li a {
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+        font-size: 56px;
+    }
+    #nextVideo {
+        margin-bottom: 80px;
+    }
+}
