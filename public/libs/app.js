@@ -29,7 +29,12 @@ const listOfVideoIds = [
     'nsaH7gjZYXE',
     'wfzadSG4NH0',
     'v-7Fs9HJvs0',
-    'FMe3J5i1BLY'
+    'FMe3J5i1BLY',
+    '6EltJfpfmJg',
+    'rw2qviFnEKE',
+    'rfOY8ePOs_0',
+    '_ih-drNEOT8',
+    'UGbFh-EleSY'
 ]
 
 let isFirstRound = true
