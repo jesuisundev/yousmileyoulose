@@ -76,7 +76,6 @@ async function setupFaceDetection(event) {
 
 /**
  * Load models from faceapi.
- * 
  * Host need be replaced by your local ip if you running this in local !
  * @async
  */
@@ -120,7 +119,7 @@ function setupYoutubePlayer() {
     player = new YT.Player('player', {
         height: '100%',
         width: '100%',
-        videoId: 'ewjkzE6X3BM',
+        videoId: extractRandomAvailableVideoId(),
         playerVars: {
             'controls': 0,
             'rel': 0,
@@ -255,8 +254,8 @@ function extractRandomAvailableVideoId() {
 }
 
 /**
- * Determine if the user is smiling or not by getting the most likely current expression 
- * using the facepi detection object. Build a array to iterate on each possibility and 
+ * Determine if the user is smiling or not by getting the most likely current expression
+ * using the facepi detection object. Build an array to iterate on each possibility and
  * pick the most likely.
  * @param {Object} expressions object of expressions
  * @return {Boolean}
