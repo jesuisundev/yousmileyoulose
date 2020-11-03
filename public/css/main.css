@@ -100,6 +100,8 @@ h1 {
     display: none;
     border-radius: 15px;
     font-size: 25px;
+    text-decoration: none;
+    color: darkred;
 }
 
 #theater #webcam {
@@ -264,5 +266,11 @@ p {
     }
     #nextVideo {
         margin-bottom: 80px;
+    }
+    #theater #skipVideo {
+        font-size: 6vw;
+        top: 10px;
+        bottom: auto;
+        right: 10px;
     }
 }
