@@ -89,6 +89,19 @@ h1 {
     font-size: 25px;
 }
 
+#theater #skipVideo {
+    z-index: 98;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+    display: none;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
 #theater #webcam {
     width: 25%;
     position: absolute;
