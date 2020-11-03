@@ -40,9 +40,14 @@ const listOfVideoIds = [
 let isFirstRound = true
 let isUsingCamera = false
 let currentSmileStatus = false
+let score = 0
+let videoSkipped = false
+let statusClass = "win"
+let scoreTitle = "Score"
 
 document.getElementById('actualshit').addEventListener('click', event => setupFaceDetection(event))
 document.getElementById('nextVideo').addEventListener('click', event => showNextVideo(event))
+document.getElementById('skipVideo').addEventListener('click', event => skipVideo(event))
 
 // initiate webcam
 const webcam = document.getElementById("webcam")
@@ -166,8 +171,19 @@ function startFirstRound() {
 
     document.getElementById("loading").style.display = 'none'
     document.getElementById('intermission').className = 'fadeOut'
+    
 
     player.playVideo()
+    document.getElementById('skipVideo').style.display = 'block'
+}
+
+/**
+ * Stop the video and show the intermission
+ * on video end or skipped
+ */
+function onVideoEnd() {
+    player.stopVideo()
+    showIntermission()
 }
 
 /**
@@ -177,9 +193,27 @@ function startFirstRound() {
 function onPlayerStateChange(event) {
     // 0 means the video is over
     if (event.data === 0) {
-        player.stopVideo()
-        showIntermission()
+        onVideoEnd()
     }
+}
+
+/**
+ * Change classes and score text to
+ * match with win or lose status
+ */
+function matchUiWithWinStatus() {
+    if (currentSmileStatus) {
+        statusClass = "lose"
+        scoreTitle = "Your score was"
+    } else {
+        statusClass = "win"
+        scoreTitle = "Score"
+    }
+
+    document.getElementById('resultSmileStatus').className = statusClass
+    document.getElementById('score').className = statusClass
+    document.getElementById('scoreTitle').textContent = scoreTitle
+    document.getElementById('scoreResult').textContent = score
 }
 
 /**
@@ -190,17 +224,26 @@ function showIntermission() {
     let smileStatusText = "Your camera is off, you not even trying to beat the game."
 
     if (isUsingCamera) {
-        if (currentSmileStatus) {
+        if (videoSkipped){
+            videoSkipped = false
+            // player will not lose if he skips the video
+            currentSmileStatus = false
+            smileStatusText = "You skipped the video. Don't cheat too much ;)"
+            matchUiWithWinStatus()
+        } else if (currentSmileStatus) {
             smileStatusText = "You SMILED during the video !"
-            document.getElementById('resultSmileStatus').className = "lose"
+            matchUiWithWinStatus()
+            score = 0
         } else {
             smileStatusText = "You didn't smile during the video !"
-            document.getElementById('resultSmileStatus').className = "win"
+            score++
+            matchUiWithWinStatus()
         }
     }
 
     document.getElementById('resultSmileStatus').textContent = smileStatusText
     document.getElementById('loading').style.display = 'none'
+    document.getElementById('skipVideo').style.display = 'none'
     document.getElementById('nextVideo').style.display = 'inline-block'
     document.getElementById('result').style.display = 'block'
     document.getElementById('intermission').className = 'fadeIn'
@@ -224,10 +267,21 @@ function showNextVideo(event) {
         setTimeout(() => {
             currentSmileStatus = false
             document.getElementById('intermission').className = 'fadeOut'
+            document.getElementById('skipVideo').style.display = 'block'
         }, 1000)
     } else {
         showCredit()
     }
+}
+
+/**
+ * When we click on the skip button, mark the video as skipped
+ * and trigger video end function
+ */
+function skipVideo(event) {
+    event.preventDefault()
+    videoSkipped = true
+    onVideoEnd()
 }
 
 /**
